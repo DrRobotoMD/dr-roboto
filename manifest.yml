@@ -1,0 +1,15 @@
+---
+declared-services:
+  Conversation-qy:
+    label: conversation
+    plan: lite
+applications:
+- name: DrRoboto
+  command: npm start
+  path: .
+  memory: 256M
+  instances: 1
+  services:
+  - Conversation-qy
+  env:
+    NPM_CONFIG_PRODUCTION: false
